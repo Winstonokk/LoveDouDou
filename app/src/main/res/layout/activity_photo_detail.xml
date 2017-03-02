@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/photo_detail_background_color">
+
+    <ImageView
+        android:id="@+id/img_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        android:transitionName="@string/transition_photo"
+        tools:targetApi="LOLLIPOP" />
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/photo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:navigationIcon="@mipmap/ic_arrow_back"
+        app:title="@string/str_beautiful_girl">
+
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>

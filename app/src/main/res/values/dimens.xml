@@ -1,0 +1,38 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+
+    <dimen name="padding_size_s">4dp</dimen>
+    <dimen name="padding_size_m">6dp</dimen>
+    <dimen name="padding_size_l">8dp</dimen>
+    <dimen name="padding_size_xl">10dp</dimen>
+    <dimen name="padding_size_xxl">16dp</dimen>
+
+    <dimen name="post_img_count_height">16dp</dimen>
+    <dimen name="post_img_count_tv_size">9sp</dimen>
+
+
+    <dimen name="text_size_s">12sp</dimen>
+    <dimen name="text_size_m">14sp</dimen>
+    <dimen name="text_size_l">16sp</dimen>
+    <dimen name="text_size_xxl">20sp</dimen>
+
+    <dimen name="img_size_l">80dp</dimen>
+    <dimen name="img_size_width">100dp</dimen>
+    <dimen name="img_size_height">75dp</dimen>
+    <dimen name="app_bar_height">256dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="height_size_l">40dp</dimen>
+    <dimen name="height_size_m">36dp</dimen>
+    <dimen name="text_size_big">28sp</dimen>
+</resources>

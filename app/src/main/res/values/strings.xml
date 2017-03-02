@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">爱逗逗</string>
+
+    <string name="menu_app_tip">背对背拥抱，越来越逗</string>
+    <string name="menu_app_tip2">因味而来</string>
+    <string name="str_hot_news">热点新闻</string>
+    <string name="str_hot_music">潮流音乐</string>
+    <string name="str_hot_smile">每天一笑</string>
+    <string name="str_hot_girl">逗逗美女</string>
+    <string name="str_hot_video">精品视频</string>
+    <string name="str_share">分享</string>
+    <string name="str_about_us">关于</string>
+
+    <string name="transition_photo">transition_animation_news_photos</string>
+    <string name="title_news_photo_detail">图集</string>
+    <string name="share">分享</string>
+    <string name="share_contents">来自「爱逗逗」的分享：%1$s %2$s</string>
+    <string name="picture_already_save_to">图片已保存至%1$s</string>
+    <string name="set_wallpaper_success">设置壁纸成功</string>
+    <string name="save">保存</string>
+    <string name="set_wallpaper">设置壁纸</string>
+
+    <string name="loading">努力加载中...</string>
+    <string name="refresh_empty_text">点我一下，重新加载</string>
+    <string name="post_img_count_value">￥%1$d图</string>
+    <string name="network_error">网络异常，请检查网络设置</string>
+    <string name="db_error">数据库出错了</string>
+    <string name="str_beautiful_girl">妹子</string>
+    <string name="str_set">设置</string>
+
+    <string name="str_news">新闻</string>
+    <string name="news_content_from_value">%1$s %2$s</string>
+    <string name="news_channel_my_title">我的频道</string>
+    <string name="edit_text">编辑</string>
+    <string name="finish_text">完成</string>
+    <string name="news_channel_recommend_title">频道推荐</string>
+    <string name="news_channel_title">频道管理</string>
+
+    <string name="str_video">视频</string>
+    <string name="N_A">N/A</string>
+    <string name="close">Close</string>
+    <string name="vdec">vdec</string>
+    <string name="fps">fps</string>
+    <string name="v_cache">v-cache</string>
+    <string name="a_cache">a-cache</string>
+
+    <string name="media_information">Media Information</string>
+    <string name="mi_player">Player</string>
+    <string name="mi_media">Media</string>
+    <string name="mi_profile_level">Profile level</string>
+    <string name="mi_pixel_format">Pixel format</string>
+    <string name="mi_resolution">Resolution</string>
+    <string name="mi_length">Length</string>
+    <string name="mi_stream_fmt1">Stream #%d</string>
+    <string name="mi_type">Type</string>
+    <string name="mi_language">Language</string>
+    <string name="mi_codec">Codec</string>
+    <string name="mi_frame_rate">Frame rate</string>
+    <string name="mi_bit_rate">Bit rate</string>
+    <string name="mi_sample_rate">Sample rate</string>
+    <string name="mi_channels">Channels</string>
+    <string name="mi__selected_video_track">*</string>
+    <string name="mi__selected_audio_track">*</string>
+
+    <string name="TrackType_video">Video</string>
+    <string name="TrackType_audio">Audio</string>
+    <string name="TrackType_subtitle">Subtitle</string>
+    <string name="TrackType_timedtext">Timed text</string>
+    <string name="TrackType_metadata">Meta data</string>
+    <string name="TrackType_unknown">Unknown</string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="VideoView_error_button">OK</string>
+
+    <string name="VideoView_ar_aspect_fit_parent">Aspect / Fit parent</string>
+    <string name="VideoView_ar_aspect_fill_parent">Aspect / Fill parent</string>
+    <string name="VideoView_ar_aspect_wrap_content">Aspect / Wrap content</string>
+    <string name="VideoView_ar_match_parent">Free / Fill parent</string>
+    <string name="VideoView_ar_16_9_fit_parent">16:9 / Fit parent</string>
+    <string name="VideoView_ar_4_3_fit_parent">4:3 / Fit parent</string>
+
+    <string name="VideoView_render_none">Render: None</string>
+    <string name="VideoView_render_surface_view">Render: SurfaceView</string>
+    <string name="VideoView_render_texture_view">Render: TextureView</string>
+
+    <string name="VideoView_player_none">Player: None</string>
+    <string name="VideoView_player_AndroidMediaPlayer">Player: AndroidMediaPlayer</string>
+    <string name="VideoView_player_IjkMediaPlayer">Player: IjkMediaPlayer</string>
+    <string name="VideoView_player_IjkExoMediaPlayer">Player: IjkExoMediaPlayer</string>
+
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2fd2ea">
+
+    <ImageView
+        android:id="@+id/logo_bg"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/doudou_logo_bg"/>
+
+    <ImageView
+        android:id="@+id/logo_word"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/doudou_word"
+        tools:alpha="1"/>
+
+    <ImageView
+        android:id="@+id/logo_trumpet"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/doudou_smile"
+        android:alpha="0"
+        tools:alpha="1"/>
+
+    <TextView
+        android:id="@+id/app_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:alpha="0"
+        android:text="逗逗"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20"
+        tools:alpha="1"/>
+    
+</FrameLayout>

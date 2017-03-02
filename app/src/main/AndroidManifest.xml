@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ecity.wangfeng.lovedoudou">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--欢迎页-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <!--主界面-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--photo-->
+        <activity
+            android:name=".activity.PhotoDetailActivity"
+            android:theme="@style/AppTheme.Trans" />
+        <!--news-->
+        <activity
+            android:name=".activity.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTrans" />
+        <activity
+            android:name=".activity.NewsPhotoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Trans" />
+        <activity
+            android:name=".activity.NewsChannelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTrans" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
