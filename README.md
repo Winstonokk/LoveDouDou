@@ -1,7 +1,7 @@
 # LoveDouDou
 爱逗逗——集新闻资讯，影视评论，漂亮妹子，视频播放于一身的app，用于练习MVP+Retrofit+RxJava+Glide框架，如今将其开源，仅供学习探讨，禁止商用。
-
 以下为应用app各模块截图：
+
 ![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/1.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/2.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/3.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/4.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/5.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/6.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/7.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/8.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/9.png)![](https://github.com/wangfeng19930909/LoveDouDou/blob/master/screentshot/10.png)
 
 *****功能模块：
