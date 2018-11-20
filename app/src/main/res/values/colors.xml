@@ -3,7 +3,7 @@
     <color name="colorPrimary">#324968</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="main_style_color">#324968</color>
     <color name="text_color_secondary">#3e3e3e</color>
     <color name="image_place_holder">#DFDFDF</color>
     <color name="night_mask">#00000000</color>
@@ -40,4 +40,24 @@
 
     <color name="channel_bg_lighter_gray">#eeeeee</color>
     <color name="channel_bg_dark_gray">#e1e1e1</color>
+    <color name="color999999">#999999</color>
+    <color name="colorText">#2C2C2C</color>
+    <!--电影评分-->
+    <color name="colorRateRed">#FB5B81</color>
+    <!--item的分割线-->
+    <color name="colorLineItem">#FFDDDDDD</color>
+    <color name="translucent">#0fff</color>
+    <!--正文文字颜色-->
+    <color name="colorContent">#ff333333</color>
+    <color name="colorTitle">#666</color>
+    <color name="text_color_dark">#333</color>
+    <color name="text_color_grey">#999</color>
+    <color name="text_color_light">@android:color/white</color>
+    <color name="text_color_high_light">?attr/colorAccent</color>
+    <color name="bg_grey">#eee</color>
+    <color name="bg_dark_grey">#ccc</color>
+    <color name="color_toplist_first">#cfb53b</color>
+    <color name="color_toplist_second">#737791</color>
+    <color name="color_toplist_third">#8c7853</color>
+    <color name="color_toolist_default">#aaa</color>
 </resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 标题 -->
+    <com.barnettwong.lovedoudou.ui.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_detail_title"
+                style="@style/TextTitleStyle"
+                android:layout_margin="@dimen/spacing_double"
+                android:textSize="@dimen/text_big"
+                tools:text="XXXXXXX" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_double"
+                android:layout_marginRight="@dimen/spacing_double"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_movie_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    tools:src="@mipmap/ic_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_publish_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_normal"
+                        tools:text="XXXXXXXXXXXXXXXX" />
+
+                    <include layout="@layout/user_review_info" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_view" />
+
+            <WebView
+                android:id="@+id/wv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_normal"></WebView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

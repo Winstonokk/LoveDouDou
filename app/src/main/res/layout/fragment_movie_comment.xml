@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.barnettwong.lovedoudou.ui.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.barnettwong.lovedoudou.ui.view.TitleBar>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/fragment_news_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBar">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_news_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+            <com.jaydenxiao.common.commonwidget.LoadingTip
+                android:id="@+id/loadedTip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</RelativeLayout>

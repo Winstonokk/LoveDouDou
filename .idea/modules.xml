@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LoveDouDou.iml" filepath="$PROJECT_DIR$/LoveDouDou.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/common/common.iml" filepath="$PROJECT_DIR$/library/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/irecyclerview/irecyclerview.iml" filepath="$PROJECT_DIR$/library/irecyclerview/irecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/jcvideoplayer/jcvideoplayer.iml" filepath="$PROJECT_DIR$/library/jcvideoplayer/jcvideoplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/photoPicker/photoPicker.iml" filepath="$PROJECT_DIR$/library/photoPicker/photoPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/provider7/provider7.iml" filepath="$PROJECT_DIR$/library/provider7/provider7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/selectordialog/selectordialog.iml" filepath="$PROJECT_DIR$/library/selectordialog/selectordialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_doudou.iml" filepath="$PROJECT_DIR$/test_doudou.iml" />
     </modules>
   </component>
 </project>

@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.news.NewsFragment">
+    android:clipToPadding="true"
+    android:orientation="vertical">
+    <!--<com.barnettwong.lovedoudou.ui.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.barnettwong.lovedoudou.ui.view.TitleBar>-->
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/main_color"
         android:theme="@style/AppTheme.AppBarOverlay">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/main_color"
             android:orientation="horizontal">
-
             <android.support.design.widget.TabLayout
-                android:id="@+id/tab_layout"
+                android:id="@+id/tabs"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/white"
+                app:tabBackground="@color/main_color"
                 android:layout_weight="1">
-
             </android.support.design.widget.TabLayout>
-
-            <ImageView
-                android:id="@+id/add_channel_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:maxHeight="?attr/actionBarSize"
-                android:padding="@dimen/padding_size_l"
-                android:src="@mipmap/ic_add" />
         </LinearLayout>
-
 
     </android.support.design.widget.AppBarLayout>
 
@@ -43,17 +39,7 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.ecity.wangfeng.lovedoudou.fragment.news.NewsFragment" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </android.support.v4.view.ViewPager>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/margin_16"
-        android:src="@mipmap/ic_arrow_upward"
-        app:layout_behavior=".widget.ScrollAwareFABBehavior"
-        />
-
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

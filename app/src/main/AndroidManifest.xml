@@ -1,55 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ecity.wangfeng.lovedoudou">
+    package="com.barnettwong.lovedoudou">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <application
-        android:name=".MyApplication"
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--欢迎页-->
+        <!-- 主页面 -->
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <!--主界面-->
+        <!--新闻详情页 -->
         <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <!--photo-->
-        <activity
-            android:name=".activity.PhotoDetailActivity"
-            android:theme="@style/AppTheme.Trans" />
-        <!--news-->
-        <activity
-            android:name=".activity.NewsDetailActivity"
+            android:name=".ui.activity.NewsDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoTrans" />
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--影评详情页 -->
         <activity
-            android:name=".activity.NewsPhotoDetailActivity"
+            android:name=".ui.activity.CommentDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Trans" />
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--图片详情页 -->
         <activity
-            android:name=".activity.NewsChannelActivity"
+            android:name=".ui.activity.PhotoDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoTrans" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--关于 -->
+        <activity
+            android:name=".ui.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
 
+
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            >
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:taskAffinity="me.shaohui.shareutil"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            >
+        </activity>
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="你的qq_id" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".share.shareutil._ShareActivity"/>
+
+        <activity-alias
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:targetActivity=".share.shareutil._ShareActivity" />
     </application>
 
 </manifest>

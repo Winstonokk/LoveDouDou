@@ -35,4 +35,24 @@
     <dimen name="height_size_l">40dp</dimen>
     <dimen name="height_size_m">36dp</dimen>
     <dimen name="text_size_big">28sp</dimen>
+    <dimen name="item_margin">8dp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+
+    <dimen name="spacing_mico">4dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="spacing_double">16dp</dimen>
+    <dimen name="spacing_huge">32dp</dimen>
+    <dimen name="spacing_huger">48dp</dimen>
+    <dimen name="text_tiny">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_mid">14sp</dimen>
+    <dimen name="text_normal">16sp</dimen>
+    <dimen name="text_big">20sp</dimen>
+    <dimen name="text_bigger">24sp</dimen>
+    <dimen name="text_huge">30sp</dimen>
+    <dimen name="appbar_size">256dp</dimen>
 </resources>

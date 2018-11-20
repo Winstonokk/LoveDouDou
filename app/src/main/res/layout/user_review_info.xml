@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/spacing_normal"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:src="@mipmap/icon"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/spacing_double"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="XXXXXXX"
+            android:textSize="@dimen/text_mid"/>
+        <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_mid"
+            android:textColor="@color/text_color_dark"
+            tools:text="xxxxxxxx"/>
+
+    </LinearLayout>
+
+</LinearLayout>

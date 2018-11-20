@@ -3,13 +3,19 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:\NewAndroidStudio\gradle\gradle-2.14.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/common" />
+            <option value="$PROJECT_DIR$/library/irecyclerview" />
+            <option value="$PROJECT_DIR$/library/jcvideoplayer" />
+            <option value="$PROJECT_DIR$/library/photoPicker" />
+            <option value="$PROJECT_DIR$/library/provider7" />
+            <option value="$PROJECT_DIR$/library/selectordialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

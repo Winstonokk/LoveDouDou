@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.PhotoFragment">
-
-    <include
-        layout="@layout/fragment_photo_main"
+    android:orientation="vertical">
+    <com.barnettwong.lovedoudou.ui.view.TitleBar
+        android:id="@+id/titleBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/margin_16"
-        android:src="@mipmap/ic_arrow_upward"
-        app:layout_behavior=".widget.ScrollAwareFABBehavior" />
+    </com.barnettwong.lovedoudou.ui.view.TitleBar>
 
-</android.support.design.widget.CoordinatorLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.jaydenxiao.common.commonwidget.LoadingTip
+                android:id="@+id/loadingtip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

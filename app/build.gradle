@@ -1,90 +1,103 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    signingConfigs {
+        debug {
+            keyAlias 'android.keystore'
+            keyPassword 'android'
+            storeFile file('/Users/user/Desktop/keySign/android.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
     defaultConfig {
-        applicationId "com.ecity.wangfeng.lovedoudou"
-        minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0.01"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.barnettwong.lovedoudou"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+        //版本名后面添加一句话，意思就是flavor dimension 它的维度就是该版本号，这样维度就是都是统一的了
+        flavorDimensions "versionCode"
+
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'/*,'arm64-v8a'*/
+
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "fcdf3ebeb3251b7551dcda78", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "yyb", //暂时填写默认值即可.
+        ]
     }
     buildTypes {
-        release {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-}
 
-allprojects {
-    gradle.projectsEvaluated {
-        tasks.withType(JavaCompile) {
-            options.compilerArgs <<"-Xlint:unchecked"<< "-Xlint:deprecation"
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:support-v4:23.4.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:7.0.1'
-
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-
-
-    compile('com.github.bumptech.glide:okhttp3-integration:1.4.0') {
-        exclude group: 'glide-parent'
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
     }
 
-    compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'com.github.florent37:diagonallayout:1.0.2'
-    compile 'com.flaviofaria:kenburnsview:1.0.7'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
+}
 
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/open_sdk_r5756_lite.jar')
+    implementation files('libs/weiboSDKCore_3.1.4.jar')
+    implementation files('libs/libammsdk.jar')
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    implementation 'com.github.XunMengWinter:CircularAnim:0.3.3'
+    //view
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
 
-    compile 'com.github.chrisbanes:PhotoView:1.2.6'
-    compile 'com.github.zhaokaiqiang.klog:library:1.4.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'io.reactivex:rxjava:1.2.1'
-    compile 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
 
-    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
-
-    compile 'com.github.waynell:VideoListPlayer:1.3'
-    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.3'
-    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.3'
-    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.3'
-    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.3'
-    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.3'
-
-    compile files('libs/MobCommons-2016.1020.1028.jar')
-    compile files('libs/MobTools-2016.1020.1028.jar')
-    compile files('libs/ShareSDK-Core-2.7.8.jar')
-    compile files('libs/ShareSDK-QQ-2.7.8.jar')
-    compile files('libs/ShareSDK-QZone-2.7.8.jar')
-    compile files('libs/ShareSDK-SinaWeibo-2.7.8.jar')
-    compile files('libs/ShareSDK-Wechat-2.7.8.jar')
-    compile files('libs/ShareSDK-Wechat-Core-2.7.8.jar')
-    compile files('libs/ShareSDK-Wechat-Favorite-2.7.8.jar')
-    compile files('libs/ShareSDK-Wechat-Moments-2.7.8.jar')
-    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    //新增库
+    implementation project(':library:common')//图片选择
+    implementation project(':library:photoPicker')//图片选择
+    implementation project(':library:irecyclerview')//万能适配器和recyclerview
+    implementation project(':library:jcvideoplayer')//视频播放
+    implementation project(':library:selectordialog')//常用提示框
+    implementation project(':library:provider7')//android7.0文件访问权限适配
+    implementation 'org.jsoup:jsoup:1.10.2'//网页解析器
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'//浮动view
+    implementation 'com.github.florent37:diagonallayout:1.0.2'
+    implementation 'com.balysv.materialmenu:material-menu:2.0.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'me.shaohui:bottomdialog:1.1.9'
 }
